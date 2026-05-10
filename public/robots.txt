@@ -1,0 +1,12 @@
+# robots.txt for The Pen & Tongue Academy
+# https://penandtongueacademy.com
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://penandtongueacademy.com/sitemap.xml
+
+# Disallow admin or private areas (if any)
+# Disallow: /admin/
+# Disallow: /private/

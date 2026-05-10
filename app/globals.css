@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Amiri:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans text-gray-800 antialiased;
+    background-color: #FAFDF9;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+  }
+}
+
+@layer components {
+  .geometric-pattern {
+    background-image: 
+      radial-gradient(circle at 20% 50%, rgba(3, 95, 44, 0.03) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(170, 214, 76, 0.04) 0%, transparent 50%),
+      radial-gradient(circle at 40% 80%, rgba(252, 134, 0, 0.02) 0%, transparent 50%);
+  }
+
+  .islamic-divider {
+    @apply flex items-center justify-center gap-4 my-8;
+  }
+
+  .islamic-divider::before,
+  .islamic-divider::after {
+    content: '';
+    @apply h-px flex-1 max-w-[100px];
+    background: linear-gradient(90deg, transparent, #035F2C, transparent);
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 bg-primary text-white font-medium rounded-lg 
+           transition-all duration-300 hover:bg-primary-dark hover:shadow-lg hover:-translate-y-0.5
+           focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+  }
+
+  .btn-accent {
+    @apply inline-flex items-center justify-center px-6 py-3 bg-accent text-white font-medium rounded-lg 
+           transition-all duration-300 hover:bg-accent-dark hover:shadow-lg hover:-translate-y-0.5
+           focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center px-6 py-3 border-2 border-primary text-primary font-medium rounded-lg 
+           transition-all duration-300 hover:bg-primary hover:text-white hover:shadow-lg;
+  }
+
+  .section-padding {
+    @apply px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-20;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-soft-dark;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
